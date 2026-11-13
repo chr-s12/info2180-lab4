@@ -2,11 +2,74 @@ body{
 font-family: Arial, Sans-serif;
 text-align: center;
 margin-top:50px;
+min-height: 50vh;
 
 }
+header{
+ background-color:#4A89B8;
+ display: flex;
+ justify-content: center;
+ margin: 0px;
+ padding: 0px;
+}
+header h1{
+ font-family: "Oswald", Impact, Sans-serif;
+ font-size:30px;
+ font-weight: 500;
+ color:#FFFFFF;
+ margin: 0px;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "label  label"
+    "search button"
+    "heading heading"
+    "result result";
+  column-gap: 8px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: left;
+}
+label{
+  grid-area:label;
+  font-size: 12px;
+}
+input{
+  grid-area:search;
+  font-size: 12px;
+  border:2px solid #E0E0E0;
+  background-color: #FFFFFF;
+}
 button{
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+grid-area: button;
+font-size: 12px;
+padding: 9px 15px;
+font-size:12px;
+cursor: pointer;
+background-color: #CC2222;
+color: #FFFFFF;
+}
+h2 {
+  grid-area: heading;
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #1B2340;
+  margin: 30px 0 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #CCCCCC;
+}
 
+#result {
+  grid-area: result;
+  font-size: 11px;
+  margin-top: 16px;
+}
+
+
+#result .error{
+color: #CC2222;
+font-size: 8px;
 }
